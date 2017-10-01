@@ -1,8 +1,20 @@
+#body {
+		background: #22262B;
+		color: #fff;
+}
+
+.heading {
+	font-family: 'Pacifico', cursive;
+}
+
 .board {
-	border: 2px solid red;
+	margin-top : 20px;
+	border: 2px solid #fff;
 }
 
 td {
-	border: 2px solid red;
+	font-family: 'Passion One', cursive;
+	font-size: 40px;
+	border: 2px solid #fff;
 	text-align: center;
 }
