@@ -31,7 +31,9 @@ $(document).ready(function(){
 		check();
 		checkComp();
 	});
-
+	$('#reset').click(function(){
+		window.location.reload();
+	});
 	function comp(){
 		while(done !== true){
 
