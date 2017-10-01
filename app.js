@@ -1,6 +1,10 @@
 $(document).ready(function(){
-	var cross = 'X';
+	input_symbol = prompt("What would Like to be X or 0(zero) ?");
+	var cross = input_symbol;
 	var zero = '0';
+	if(cross === '0'){
+		zero = 'x';		
+	}
 	var row = [];
 	var column = [];
 	var cRow = [];
@@ -25,6 +29,7 @@ $(document).ready(function(){
 		}
 		comp();
 		check();
+		checkComp();
 	});
 
 	function comp(){
@@ -42,7 +47,6 @@ $(document).ready(function(){
 					done = true;
 				}
 			}
-			checkComp();
 
 	}
 
@@ -73,7 +77,15 @@ $(document).ready(function(){
 					else{
 						window.location.reload();
 					}
-		}		
+		}
+
+		if(personArr.indexOf('2,0') != -1 && personArr.indexOf('0,2') != -1 && personArr.indexOf('1,1') != -1){
+				if(alert("You won!")){}
+					else{
+						window.location.reload();
+					}
+		}
+
 		
 	}
 
@@ -106,6 +118,12 @@ $(document).ready(function(){
 					}
 		}		
 		
+		if(compArr.indexOf('1,1') != -1 && compArr.indexOf('0,2') != -1 && compArr.indexOf('2,0') != -1){
+				if(alert("Computer won!")){}
+					else{
+						window.location.reload();
+					}
+		}
 	}
 
 });
